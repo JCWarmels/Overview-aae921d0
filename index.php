@@ -19,14 +19,7 @@ $pdo = new PDO($dsn, $user, $passwd);
         <h2>Series</h2>
         <table>
         <tr><th style='width:150px'>Title</th><th style='width:150px'>Rating</th></tr>
-        <?php 
-        $result_series =  $pdo->query("SELECT title, rating FROM series ORDER BY rating DESC");
-        while($row_series = $result_series->fetch()) {
-            echo '<tr><td>';
-            echo($row_series['title'] . '</td><td style="text-align:center;">' .  $row_series['rating']);
-            echo '</td></tr>';
-        }
-        ?>
+        <?php include 'table1.php'; ?>
         </table>
         <h2>Films</h2>
         <table>
